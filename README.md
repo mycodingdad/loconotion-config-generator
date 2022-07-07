@@ -1,6 +1,6 @@
 # Loconotion Config Generator
 
-**Loconotion Config Generator** is a Python script that load a [Notion.so](https://notion.so) database's pages information and generate a [Loconotion](https://github.com/leoncvlt/loconotion) configuration file for changing page URLs and inserting [Open Graph](https://ogp.me/) tags. 
+**Loconotion Config Generator** is a Python script that load a [Notion.so](https://notion.so) database's pages information and generates a [Loconotion](https://github.com/leoncvlt/loconotion) configuration file for changing page URLs and inserting [Open Graph](https://ogp.me/) tags. 
 
 ## But Why?
 
