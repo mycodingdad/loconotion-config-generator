@@ -1,0 +1,28 @@
+# Path for the generated config 
+generated_config_path = "dist/generated_config.toml"
+
+# Path for the config to be merged into the generated config
+merge_config_path = "manual_config.toml"
+
+
+# Notion Database Infomation
+database_id = "<Notion Database ID Here>"
+
+# Notion API Configuration
+token = "<Notion API Token Here>"
+
+# Notion Database Property names
+title_property = "title"
+description_property = "description"
+slug_property = "slug"
+date_property = "date"
+
+# Site Information
+site_title = "CodingDad 2.0; No Secret Wiki"
+site_description = "I'm a programmer who likes to make games with my son."
+site_url = "https://codingdad.me"
+site_image = "https://codingdad.me/codingdad_logo.png"
+
+# Twitter Information
+twitter_site = "@mycodingdad"
+twitter_creator = "@mycodingdad"
