@@ -113,6 +113,8 @@ class Generator:
         for page_id in page_info_dict:
             page_info = page_info_dict[page_id]
             config["pages"][page_id] = {}
+            if page_info.slug:
+                config["pages"][page_id]["slug"] = page_info.slug
             config["pages"][page_id]["meta"] = self.create_meta_array(
                 page_info["title"], 
                 page_info["description"], 

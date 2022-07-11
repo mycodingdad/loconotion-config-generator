@@ -61,6 +61,7 @@ def test_create_config():
         },
         "pages" : {
             "59f6278a93e04df09e80b20b9d2a3bca":{
+                "slug" : "404",
                 "meta" : [
                     {"name" : "title",  "content" : "페이지를 찾을 수가 없어요"},
                     {"name" : "description",  "content" : ""},
@@ -80,6 +81,7 @@ def test_create_config():
                 ]
             },
             "b69aacb4f2b7415497ef90dccfa76e64":{
+                "slug" : "2022-06-28-blog-migration-loconotion",
                 "meta" : [
                     {"name" : "title",  "content" : "loconotion과 Notion으로 블로그 이전"},
                     {"name" : "description",  "content" : "워드프레스에서 운영하던 블로그를 notablog와 loconotion으로 이전한 이야기. 그리고 리다이렉트와 사이트맵 만들기."},
