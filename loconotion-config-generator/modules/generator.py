@@ -4,6 +4,7 @@ import logging
 import json
 import os
 import codecs
+import pprint
 
 log = logging.getLogger(f"loconotion-config-generator.{__name__}")
 
@@ -65,7 +66,7 @@ class Generator:
 
             page_info_dict[id] = {'slug': slug, 'title': title, 'description': description }
 
-        log.debug ( f'page_info_dict = {page_info_dict}')
+        log.debug ( f'page_info_dict = {pprint.pformat(page_info_dict)}')
         return page_info_dict
 
     def get_database_from_notion(self):
@@ -82,7 +83,7 @@ class Generator:
         r = requests.post(url, headers=headers)
         database_page_dict = r.json()
 
-        log.debug( f'Notion API Response = {json.dumps(database_page_dict, indent=4)}')
+        log.debug( f'Notion API Response = {pprint.pformat(database_page_dict)}')
         return database_page_dict
 
     def create_config_dict( self, page_info_dict):
@@ -113,8 +114,11 @@ class Generator:
         for page_id in page_info_dict:
             page_info = page_info_dict[page_id]
             config["pages"][page_id] = {}
-            if page_info.slug:
-                config["pages"][page_id]["slug"] = page_info.slug
+
+            log.debug ( f'[create_config_dict] page_id={page_id}, page_info={pprint.pformat(page_info)}')
+
+            if page_info["slug"]:
+                config["pages"][page_id]["slug"] = page_info["slug"]
             config["pages"][page_id]["meta"] = self.create_meta_array(
                 page_info["title"], 
                 page_info["description"], 
